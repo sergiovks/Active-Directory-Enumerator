@@ -1,2 +1,6 @@
 # Active-Directory-Enumerator
-Automated Bash Script To Enumerate an Active Directory
+Automated Bash Scripts To Enumerate an Active Directory.
+
+Kerberos
+SMB
+LDAP
