@@ -1,4 +1,4 @@
-# Active-Directory-Enumerator
+# Active-Directory-Enumerators
 Automated Bash Scripts To Enumerate an Active Directory.
 
 Kerberos,
