@@ -39,6 +39,3 @@ nmap -p 445 --script=smb-os-discovery,smb-enum-users,smb-enum-shares,smb-enum-se
 
 # Dump Kerberos tickets
 /usr/local/bin/python3.8/dist-packages/ticket_converter.py -i spn.txt -o tickets.kirbi
-
-# Enumerate Active Directory environment with ldapsearch
-ldapsearch -x -h $DC -D "$USER@$DOMAIN" -w $PASSWORD -b "dc=$DOMAIN" -LLL -s sub "(&(objectClass=computer)(operatingSystem=*))"
