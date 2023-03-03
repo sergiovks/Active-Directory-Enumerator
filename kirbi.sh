@@ -14,8 +14,8 @@ usage() {
   echo "  -h, --help                                    Show this help message and exit."
   echo "  -d, --domain DOMAIN                           The domain name to enumerate."
   echo "  -dc, --domain-controller DOMAIN_CONTROLLER    The hostname or IP address of a domain controller."
-  echo "  -u, --user USER                               The username to use when authenticating to the domain (if not user is provided, user is '')."
-  echo "  -p, --password PASSWORD                       The password to use when authenticating to the domain (if not password is provided, pass is '')."
+  echo "  -u, --user USER                               The username to use when authenticating to the domain."
+  echo "  -p, --password PASSWORD                       The password to use when authenticating to the domain."
   echo
   echo "  Impacket installation is required, install using apt or pip"
   echo
