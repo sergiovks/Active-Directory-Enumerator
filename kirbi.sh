@@ -1,5 +1,10 @@
 #!/bin/bash
 
+# Impacket installation is required, install using apt or pip
+# apt install python3-impacket
+# or
+# pip3 install impacket
+
 usage() {
   echo "Usage: $0 -d <domain> -dc <domain_controller> -u <username> -p <password>" 1>&2;
   echo
@@ -9,8 +14,14 @@ usage() {
   echo "  -h, --help                                    Show this help message and exit."
   echo "  -d, --domain DOMAIN                           The domain name to enumerate."
   echo "  -dc, --domain-controller DOMAIN_CONTROLLER    The hostname or IP address of a domain controller."
-  echo "  -u, --user USER                               The username to use when authenticating to the domain (if not password is provided, user is '')."
-  echo "  -p, --password PASSWORD                       The password to use when authenticating to the domain (if you want to use, if not, user and pass are '')."
+  echo "  -u, --user USER                               The username to use when authenticating to the domain (if not user is provided, user is '')."
+  echo "  -p, --password PASSWORD                       The password to use when authenticating to the domain (if not password is provided, pass is '')."
+  echo
+  echo "  Impacket installation is required, install using apt or pip"
+  echo
+  echo "  apt install python3-impacket"
+  echo
+  echo "  pip3 install impacket"
   exit 1;
 }
 
@@ -53,11 +64,6 @@ fi
 if [ -z "${PASSWORD}" ]; then
     PASSWORD=""
 fi
-
-# Impacket installation is required, install using apt or pip
-# apt install python3-impacket
-# or
-# pip install impacket
 
 # Get the user's Kerberos hash
 HASH=$(/usr/local/bin/python3.8/dist-packages/secretsdump.py -no-pass $USER:$PASSWORD@$DC | grep "Hash" | cut -d " " -f 2)
