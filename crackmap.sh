@@ -6,12 +6,12 @@ usage() {
   echo "This script performs several enumeration actions against a Windows Active Directory domain for the SMB protocol using crackmapexec."
   echo
   echo "Options:"
-  echo "  -h, --help                                   Show this help message and exit."
-  echo "  -d, --domain DOMAIN                          The domain name to enumerate."
-  echo "  -dc, --domain-controller DOMAIN_CONTROLLER   The hostname or IP address of a domain controller."
-  echo "  -u, --user USER                              The username to use when authenticating to the domain (if not password is provided, user is '')."
-  echo "  -p, --password PASSWORD                      The password to use when authenticating to the domain (if you want to use, if not, user and pass are '')."
-  echo "  -N, --no-pass                                Do not use a password when authenticating to the domain."
+  echo "  -h, --help                                    Show this help message and exit."
+  echo "  -d, --domain DOMAIN                           The domain name to enumerate."
+  echo "  -dc, --domain-controller DOMAIN_CONTROLLER    The hostname or IP address of a domain controller."
+  echo "  -u, --user USER                               The username to use when authenticating to the domain (if not password is provided, user is '')."
+  echo "  -p, --password PASSWORD                       The password to use when authenticating to the domain (if you want to use, if not, user and pass are '')."
+  echo "  -N, --no-pass                                 Do not use a password when authenticating to the domain."
   exit 1
 }
 
