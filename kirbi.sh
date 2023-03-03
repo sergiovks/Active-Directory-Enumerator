@@ -22,7 +22,7 @@ usage() {
   echo "  apt install python3-impacket"
   echo
   echo "  pip3 install impacket"
-  exit 1;
+  exit 0;
 }
 
 while getopts ":u:d:dc:p:h" opt; do
