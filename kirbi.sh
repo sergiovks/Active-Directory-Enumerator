@@ -53,16 +53,8 @@ while getopts ":u:d:dc:p:h" opt; do
   esac
 done
 
-if [ -z "${DOMAIN}" ] || [ -z "${DC}" ]; then
+if [ -z "${DOMAIN}" ] || [ -z "${DC}" ] || [ -z "${USER}" ] || [ -z "${PASSWORD}" ] ; then
     usage
-fi
-
-if [ -z "${USER}" ]; then
-    USER=""
-fi
-
-if [ -z "${PASSWORD}" ]; then
-    PASSWORD=""
 fi
 
 # Get the user's Kerberos hash
